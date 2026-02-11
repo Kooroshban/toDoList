@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>todolist</title>
+  </head>
+  <body class="h-screen flex justify-center items-center">
+    <div
+      class="flex flex-col w-125 bg-white rounded-xl overflow-hidden shadow-2xl/10"
+    >
+      <header class="flex flex-col bg-primary text-white py-4 px-4.5">
+        <h1 class="text-2xl font-semibold mb-1.25">
+          <i class="fas fa-check-circle"></i>
+          My Tasks
+        </h1>
+        <p id="date" class="text-[14px] opacity-90"></p>
+      </header>
+      <main>
+        <section
+          class="flex items-center bg-light gap-2.5 border-b-border py-4 px-4.5"
+        >
+          <input
+            type="text"
+            class="flex-1 bg-white py-3 px-3.75 text-[1rem] rounded-md focus:outline-none focus:border-primary focus:shadow-[0 0 0 3px rgba(119, 73, 248, 0.15)]"
+            id="task_input"
+            placeholder="What do you need to do?"
+          />
+          <button
+            class="bg-primary text-white w-10 h-10 rounded-md hover:bg-primary-light"
+            id="add_task"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
+        </section>
+
+        <section>
+          <div class="flex gap-3.75 amo py-3.75 px-6.25">
+            <span
+              class="py-1.25 px-0.75 cursor-pointer text-gray transition-all delay-200"
+              id="all"
+              >All</span
+            >
+            <span
+              class="py-1.25 px-0.75 cursor-pointer text-gray transition-all delay-200"
+              id="active"
+            >
+              Active
+            </span>
+            <span
+              class="py-1.25 px-0.75 cursor-pointer text-gray transition-all delay-200"
+              id="completed"
+            >
+              Completed
+            </span>
+          </div>
+          <div class="py-3.75">
+            <ul id="todolist"></ul>
+            <div
+              id="lable"
+              class="flex flex-col items-center justify-center py-10 text-gray hidden"
+            >
+              <i
+                class="mb-2.5 text-[40px] opacity-70 fas fa-clipboard-list"
+              ></i>
+              <p>No tasks here yet</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer
+        class="flex justify-between items-center bg-light text-[14px] px-6.25 py-3.25"
+      >
+        <p class="text-gray" id="item_left"></p>
+        <button
+          class="text-gray bg-none border-none hover:text-red-400"
+          id="clear_completed"
+        >
+          Clear completed
+        </button>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
