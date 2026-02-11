@@ -35,7 +35,7 @@ addTaskEl.addEventListener("click", () => {
         </li>`;
     }
     taskInputEl.value = "";
-    itemLeftEl.innerText`${task.length}items left`;
+    itemLeftEl.innerText=`${task.length}items left`;
     
     toDoListEl.addEventListener("click", (e) => {
         //         if(e.target.matches(".btn")){
@@ -61,6 +61,7 @@ addTaskEl.addEventListener("click", () => {
     clear_completedEl.addEventListener("click",()=>{
         toDoListEl.innerHTML = "";
         lableEL.classList.remove("hidden")
+        lableEL.classList.add("flex")
     })
     
     window.addEventListener("DOMContentLoaded", () => {
